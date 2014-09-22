@@ -1,0 +1,414 @@
+body,h1,h2,h3,h4,h5,p,quote,small,form,input,ul,li,ol,label, figure{
+	/* Page reset */
+	margin:0px;
+	padding:0px;
+}
+
+body{
+	color: #919396;
+	font-family: 'PT Sans', sans-serif;
+	height: 100%;
+	width: 100%;
+}
+.container{
+	margin: 0 auto;
+	height: auto;
+	position: relative;
+}
+
+nav[role="top_page"]{
+	background: #fff;
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+}
+nav[role="top_page"] figure, nav[role="top_page"] ul{
+	display: inline-block;
+	vertical-align: top;
+}
+nav[role="top_page"] figure img{
+	width: 100%;
+}
+nav[role="top_page"] ul{
+	list-style: none;
+	position: relative;
+}
+nav[role="top_page"] li{
+	display:inline-block;
+	position: relative;
+	vertical-align: top;
+	
+}
+nav[role="top_page"] li a{
+	background: transparent;
+	color:#a3a3a3;
+	display: block;
+	font-size: 13px;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 600;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	transition: all 0.3s;
+	position: relative;
+	width: 100%;
+	z-index: 100;
+}
+
+nav[role="top_page"] li a strong{
+	opacity: 0;
+}
+nav[role="top_page"] li a aside{
+	display: block;
+	font-size: 25px;
+}
+nav[role="top_page"] li a:hover strong{
+	color: #fff;
+	font-size: 10px;
+	opacity: 1;
+}
+.banner {
+	position: relative;
+}
+.banner div{
+	position: absolute;
+	top:0;
+	left: 0;
+}
+.banner div img{
+	width: 100%;
+	overflow: hidden;
+}
+.banner div.imagen{
+	z-index: 15;
+}
+.banner div.brillo{
+	z-index: 16;
+}
+.banner div.pantSmart{
+	z-index: 17;
+}
+.down{
+	background: url(../images/bg_next_page.jpg) repeat-x;
+	padding-top: 16px;
+	width: 100%;
+}
+.down a{
+	background: rgba(10,161,181,0.5);
+	border-radius: 10px;
+	color: #fff;
+	display: block;
+	height: 40px;
+	margin: 0 auto;
+	padding-top: 16px;
+	text-decoration: none;
+	text-align: center;
+	width:103px;
+}
+.down a aside{
+	font-size: 25px;
+}
+.try_now{
+	background: #fff;
+	text-align: center;
+}
+.try_now p, .try_now a{
+	color: #b9b9b8;
+	display: inline-block;
+	font-size: 24px;
+	vertical-align: top;
+}
+.try_now p{
+	font-family: 'Quicksand', sans-serif;
+	margin-top: 30px;
+	letter-spacing: -2px;
+}
+.try_now p strong{
+	display: inline-block;
+	color:#3e3e3e;
+	font-size: 30px;
+	margin-top: -4px;
+}
+.try_now a{
+	display: inline-block;
+	border-radius: 5px;
+	background: #9c1610;
+	color: #fff;
+	font-size: 24px;
+	padding: 8px 25px;
+	text-decoration: none;
+	margin: 20px;
+}
+footer{
+	background: #242424;
+}
+section[role="comofunciona"]{
+	background: url(../images/bg-sec.jpg) repeat-x;
+	font-family: 'Quicksand', sans-serif;
+	padding: 3% 15px;
+}
+section[role="encuentranos"]{
+	background: url(../images/bg-sec-osc.jpg);
+	padding: 25px 0;
+	overflow: hidden;
+}
+
+section[role="beneficios"]{
+	background: #2196a9 url(../images/fnd_grd_brillo.png) top center;
+	padding: 40px 0;
+}
+section[role="testimonials"]{
+	padding: 47px 0 20px 0;
+}
+
+section[role="comofunciona"] article p{
+	text-align: justify;
+	margin: 12px 0 25px 0;
+}
+section[role="comofunciona"] article figure{
+	width: 60%;
+	margin: 0 auto;
+}
+section[role="comofunciona"] article figure img{
+	width: 100%;
+}
+section[role="comofunciona"] article, section[role="comofunciona"] article h4 aside, section[role="comofunciona"] article h4 p{
+	display: inline-block;
+	vertical-align: top
+}
+section[role="comofunciona"] h1, section[role="testimonials"] h1{
+	color: #545454;
+	font-size: 25px;
+	text-transform: uppercase;
+}
+section[role="comofunciona"]  h3{
+	color: #313131;
+	font-weight: normal;
+}
+section[role="comofunciona"] article h4 p{
+	margin: 0;
+}
+section[role="comofunciona"] article h4 aside{
+	font-size: 40px;
+	font-weight: bold;
+	padding: 15px 5px 0 0;
+}
+section[role="comofunciona"] article h4{
+	color: #26c1db;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 22px;
+	letter-spacing: -2px;
+	margin: 0 auto;
+	width: 80%;
+}
+section[role="comofunciona"] article h4 strong{
+	font-size: 26px;
+}
+
+section[role="testimonials"]{
+	background:#fff url("../images/grd_bg_sec2.png") repeat-x;
+	display: inline-block;
+	margin-bottom: 2px;
+}
+header[role="title_seccion"]{
+	border-bottom: dashed 1px #878787;
+	position: relative;
+}
+header[role="title_seccion"] h1{
+	background: url("../images/icon_sf_titles.png") no-repeat center left;
+	color: #424242;
+	display: block;
+	font-size: 35px;
+	font-weight: normal;
+	letter-spacing: -2px;
+	padding: 25px 0 20px 55px;
+}
+section[role="testimonials"] header{
+	display: block;
+	border-bottom: dashed 1px #878787;
+	padding: 25px 0 40px 0;
+	text-align: center;
+}
+section[role="testimonials"] header h2{
+	color:#424242;
+	font-weight: normal;
+	font-size: 30px;
+	text-transform: uppercase;
+}
+section[role="testimonials"] header h3{
+	color:#6d6d6d;
+	font-size: 16px;
+	font-weight: normal;
+	margin: 26px 5% 0 5%;
+}
+.testimonial, .testimonial figure, .testimonial p{
+	display: block;
+	vertical-align: top;
+}
+
+.testimonial figure{
+	border: 1px solid #90bed4;
+	border-radius: 70px;
+	overflow: hidden;
+	position: relative;
+}
+.testimonial figure img{
+	width: 110%;
+	position: absolute;
+	right: 0;
+}
+.testimonial p{
+	margin: 5px 3%;
+	width: 60%;
+	text-align: justify;
+}
+
+.testimonial p strong{
+	display: block;
+	font-weight: normal;
+	margin-top:8px;
+	text-align: right;
+}
+
+.maps aside, 
+.maps a{
+	display:inline-block;
+}
+.maps a{
+	background: #be120d;
+	border-radius: 10px;
+	color: #fff;
+	font-size: 20px;
+	height: 36px;
+	margin-left: 4%;
+	padding-top: 20px;
+	text-align: center;
+	text-decoration: none;
+	width: 103px;
+}
+.maps p{
+	color: #ccc;
+	font-size: 16px;
+}
+.maps aside{
+	color: #27c0db;
+	font-size: 50px;
+}
+.maps h2{
+	color: #25c1dc;
+	font-size: 20px;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+.mapsgoogle{
+	width: 90%;
+	margin:0 auto;
+	overflow: hidden;
+	padding: 3% 0;
+}
+.testimonial{
+	border-bottom: #a4a4a4 dashed 1px;
+}
+.testimonial:last-child{
+	border:0;
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width: 320px) and (max-width: 640px) {
+.container{
+		width: 98%;
+	}
+	nav[role="top_page"] li{
+		width: 150px;
+	}
+	section[role="comofunciona"] article{
+		width: 70%;
+		margin: 0 auto;
+	}
+	nav[role="top_page"] figure{
+		display: block;
+		width: 80%;
+		margin: 0 auto;
+	}
+}
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-width: 650px) and (max-width: 1023px) {
+/* Styles */
+	.container{
+		width: 98%;
+	}
+}
+@media only screen and (min-width : 1024px) {
+/* Styles */
+	.container{
+		width: 980px;
+	}
+	nav[role="top_page"]{
+		height: 101px;
+	}
+	nav[role="top_page"] li{
+		width: 150px;
+		border-right: 1px solid #d7d7d7;
+	}
+	nav[role="top_page"] li a{
+		padding-top:25px;
+		height: 76px;
+	}
+	nav[role="top_page"] li a:hover{
+		background: url(../images/grd_mn.jpg) repeat-x;
+		color: #333;
+		height: 86px;
+	}
+	.banner {
+	
+	height: 718px;
+	}
+	.down{
+		height: 86px;
+	}
+	.try_now{
+		height: 90px;
+	}
+	section[role="comofunciona"] article{
+		width: 22%;
+		margin: 10px 5%;
+	}
+	.testimonial{
+		width: 100%;
+		margin: 0 2%;
+		padding: 25px 0;
+	}
+	.testimonial figure{
+		display: inline-block;
+		height: 100px;
+		width: 100px;
+	}
+	section[role="comofunciona"] h1{
+		width: 90%;
+		margin: 10px auto 0 auto;
+	}
+	section[role="comofunciona"]  h3{
+		width: 90%;
+		margin: 10px auto 20px auto;
+	}
+	.maps{
+		width: 90%;
+		margin: 0 auto;
+	}
+	section[role="testimonials"] {
+		padding-left: 25px;
+		width: 40%;
+	}
+	.testimonial p{
+		display: inline-block;
+		margin: 5px 10px;
+		text-align: justify;
+		width: 60%;
+	}
+	section[role="video"] {
+		display: inline-block;
+		margin-top: 70px;
+		padding: 0 2%;
+		position: relative;
+		vertical-align: top;
+		width: 51%;
+	}
+}
