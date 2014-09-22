@@ -1,0 +1,411 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SmartClub</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="stylesheet" type="text/css" href="css/all-site.css">
+<link rel="icon" type="image/ico" href="images/icon.gif" />
+<link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/style.css"></head>
+<link rel="stylesheet" href="css/login.css"></head>
+<link href="css/skdslider.css" rel="stylesheet">
+<link rel="stylesheet" href="js/jNotify.jquery.css" type="text/css" />
+<!--<link href="css/menu.css" rel="stylesheet" type="text/css">-->
+<script type="text/javascript" src="js/modernizr.custom.32123.js"></script>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/skdslider.js"></script>
+<script type="text/javascript" src="js/scrolld.js"></script>
+<script type="text/javascript" src="js/jquery.sudoSlider.min.js"></script>
+<script  src="js/scroller_hachewd.js"></script>
+
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+
+<script type="text/javascript" src="js/jNotify.jquery.js"></script>
+
+<script type="text/javascript">
+    jQuery(document).ready(function(){
+      jQuery('#banners').skdslider({delay:5000, animationSpeed: 2000,showNextPrev:true,showPlayButton:true,autoSlide:true,animationType:'fading'});
+      jQuery('#responsive').change(function(){
+        $('#responsive_wrapper').width(jQuery(this).val());
+      });
+    });
+    $(document).ready(function(){ 
+      var sudoSlider = $("#slider").sudoSlider({
+                continuous: true,
+                responsive: true,
+                auto:true,
+            });
+}); 
+
+$(function(){
+  $('#enviar').click(function(){
+    var url="send_email2.php";
+    $.ajax({
+      type: "POST",
+      url: url,
+      data: $('#contact').serialize(),
+      dataType: "json",
+      success: function(data){
+        //$('#respuesta').html(data);
+        var html = "";
+        html += "<h4>Please verify the next fields</h4>";
+        for (var p in data) {
+          html += ""+data[p]+"<br/>";
+        }
+        if(data.resultado != 1){
+          jError(
+          html,
+          {
+            autoHide : true, // added in v2.0
+            clickOverlay : false, // added in v2.0
+            MinWidth : 250,
+            TimeShown : 1000,
+            ShowTimeEffect : 200,
+            HideTimeEffect : 200,
+            LongTrip :20,
+            HorizontalPosition : 'center',
+            VerticalPosition : 'center',
+            ShowOverlay : true,
+            ColorOverlay : '#000',
+            OpacityOverlay : 0.3,
+            onClosed : function(){ // added in v2.0
+             
+            }
+          });
+        }
+        else{
+           jNotify(
+          'Mensaje enviado existosamente, gracias por contactarnos.',
+          {
+            autoHide : true, // added in v2.0
+            clickOverlay : false, // added in v2.0
+            MinWidth : 250,
+            TimeShown : 2000,
+            ShowTimeEffect : 200,
+            HideTimeEffect : 200,
+            LongTrip :20,
+            HorizontalPosition : 'center',
+            VerticalPosition : 'center',
+            ShowOverlay : true,
+            ColorOverlay : '#000',
+            OpacityOverlay : 0.3,
+            onClosed : function(){ // added in v2.0
+              
+            },
+            onCompleted : function(){ // added in v2.0
+             $('#fname').value = "";
+             $('#email').value = "";
+             $('#comments').value = "";
+            }
+          });
+        }
+      }
+    });
+    return false;
+  });
+});
+</script>
+
+</script>
+</head>
+<body>
+  <nav role="top_page" class="subMenu" id="menu">
+    <section class="container">
+      <figure><a id="topBtn" href="#top"class="topBtn"><img src="images/logo_smartclub.png"/></a></figure>
+       <div class="dropdown menuprincipal icomenu">
+        <a href="#" class="menudesp icon-menu" data-toggle="dropdown"></a>
+        <ul class="dropdown-menu droprincipal" role="menu">
+          <li><a id="demo1Btn" href="#demo1" class="demoBtn" href="#"><div class="icon-mobile"></div>Como Funciona</a></li>
+          <li><a id="demo3Btn" href="#demo3" class="demoBtn" href="#"><div class="icon-box-add"></div>Download</a></li>
+          <li><a id="demo4Btn" href="#demo4" class="demoBtn" href="#"><div class="icon-stats"></div>Para Negocios</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#myModal" class="demoBtn"><div class="icon-user"></div>Ingresar</a></li>
+          </ul>
+      </div>
+      <ul class="menufull">
+        <li><a id="demo1Btn" href="#demo1" class="demoBtn"><aside class="icon-mobile"></aside>Como Funciona<br/></a></li>
+        <li><a id="demo2Btn" href="#demo2" class="demoBtn"><aside class="icon-location"></aside>Encuentranos</a></li>
+        <li><a id="demo3Btn" href="#demo3" class="demoBtn"><aside class="icon-box-add"></aside>Download</a></li>
+        <li><a id="demo4Btn" href="#demo4" class="demoBtn"><aside class="icon-stats"></aside>Para Negocios</a></li>
+        <li><a href="#" data-toggle="modal" data-target="#myModal" class="demoBtn"><aside class="icon-user"></aside>Ingresar</a></li>
+      </ul>
+   
+    </section>
+  </nav>
+<header id="top">
+  <section class="rotaimages">
+
+      <section class="banner">
+
+          <div class="pantSmart">
+            <img src="images/smartclub_banner.png"/>
+          </div>
+
+          <div class="brillo"><img src="images/fnd_luces.png"/></div>
+         <div id="skdslider" class="skdslider">
+           <ul id="banners">
+            <li>
+            <img src="images/banner1.jpg" />
+            <!--Slider Description example
+             <div class="slide-desc">
+                <h2>Slider Title 1</h2>
+                <p>Demo description here. Demo description here. Demo description here. Demo description here. Demo description here. <a class="more" href="#">more</a></p>
+              </div>-->
+            </li>
+            <li><img src="images/banner2.jpg" />
+              <!-- <div class="slide-desc">
+                <h2>Slider Title 2</h2>
+                <p>Demo description here. Demo description here. Demo description here. Demo description here. Demo description here. <a class="more" href="#">more</a></p>
+              </div>-->
+            </li>
+          </ul>
+        </div>
+
+      </section>
+      <aside class="down">
+        <section class="container">
+        <a id="demo1Btn" href="#demo1" class="demoBtn"><aside class="icon-angle-down"></aside></a></aside>
+      </section>
+  </section>
+</header>
+ <a name="dapp" id="dapp"></a>
+<section class="try_now">
+   <section class="container">
+    <p>Es muy sencillo de usar <strong>¡pruebalo!</strong></p><a href="#">¡Descarga el app!</a>
+   </section>
+</section>
+
+<a name="demo1" id="demo1"></a>
+  <section  role="comofunciona">
+    <section class="container ">
+      <h1>Como funciona</h1>
+      <h3>Una manera muy sencilla de <strong>ganar premios y descuentos</strong> en tu negocios favorito.</h3>
+      <article>
+        <figure><img src="images/escanea.png"/></figure>
+        <h4><aside>1.</aside> <p>Escanea el <br/><strong>c&oacute;digo</strong></p></h4>
+        <p>Escanea el código QR en tu SmartClub, en el momento de realizar la compra en tu negocio favorito.</p>
+      </article>
+      <article>
+        <figure><img src="images/acumula.png"/></figure>
+        <h4><aside>2.</aside> <p>Acumula <br/><strong>punchs</strong></p></h4>
+        <p>Cada vez que leas el código, acumulas punchs en tu cuenta SmartClub.</p>
+      </article>
+      <article>
+        <figure><img src="images/canjea.png"/></figure>
+        <h4><aside>3.</aside><p>Canjea los<br/> <strong>premios</strong></p></h4>
+        <p>Canje tus punchs por premios o descuentos disponibles en los negocios afiliados.</p>
+      </article>
+       <a id="demo2Btn" href="#demo2" class="downbutton"><aside class="icon-angle-down"></aside></a></aside>
+    </section>
+     <a name="demo2" id="demo2"></a>
+  </section>
+  
+  <section role="encuentranos" id="encuentranos">
+     <section class="container s2">
+      <article>
+        <section class="maps">
+          <aside class="icon-location"></aside>
+          <aside class="find_out"><h2>Encuentranos</h2>
+          <p>Busca los establecimientos donde podras obtener los nuestros benefios.</p></aside>
+          <a href="javascript:;" id="showmap" class="icon-angle-down"></a>
+        </section>
+        <section class="mapsgoogle">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31439.84072828584!2d-84.11334505!3d9.935614249999986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e342c50d15c5%3A0xe6746a6a9f11b882!2zU2FuIEpvc8Op!5e0!3m2!1ses!2s!4v1394029432851" width="800" height="600" frameborder="0" style="border:0;border: #be120d solid 4px; overflow:hidden; border-radius:8px;"></iframe>
+        </section>
+      </article>
+
+    </section>
+  </section>
+    <a name="demo3" id="demo3"></a>
+  <section role="beneficios"> 
+    <section class="container">
+
+       <h1>Download</h1>
+   <br/>
+      <figure class="cel">
+        <img src="images/smartphones.png"/>
+      </figure>
+      <section class="downl">
+         <header class="benef_desc">
+            <h4>Descarga el app, es gratuita</h4>
+          </header>
+          <section class="desc_ben">
+            <p><strong>&#191;Ya estas cansado de llevar muchas tarjetas de lealtad en tu billereta?</strong><br/>
+            Descarga el app Smartclub y disfruta de multiples ventajas en los estableciomientos afiliados.</p>
+            <figure>
+              <img src="images/google_play.png">
+            </figure>
+            <figure>
+              <img src="images/qr_smartclub.png">
+            </figure>
+          </section>
+      </section>
+      <a id="demo4Btn" href="#demo4" class="downbutton"><aside class="icon-angle-down"></aside></a></aside>
+   </section>
+  </section>
+   <a name="demo3" id="demo4"></a>
+  <section role="testimonios">
+     <section class="container">
+      <section role="testimonials">
+        <br/>
+        <h1>testimonios</h1>
+        <article class="testimonial">
+          <figure>
+            <img src="images/testimonials_01.jpg"/>
+          </figure>
+          <p><em>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed arcu magna”</em><br/><strong>Jessica Smith</strong></p>
+       </article>
+        <article class="testimonial">
+          <figure>
+            <img src="images/testimonials_02.jpg"/>
+          </figure>
+          <p><em>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed arcu magna” </em> <br/><strong>Steve Brennan</strong></p>
+        </article>
+      </section>
+      <section role="video">
+       
+      <aside class="video">
+        <header class="benef_desc">
+            <h3>beneficios</h3>
+            <h4>Porque SmartClub es una excelente opci&oacute;n</h4>
+          </header>
+          <section class="desc_ben">
+            <article>
+              <figure><img src="images/ico_etiquetas.png" alt="Multiples"></figure>
+              <aside>
+                <h5>Multiples comercios</h5>
+                <p>Una gran red de locales afialiados a nuestro programa, que premian tu frecuencia.</p>
+              </aside>
+            </article>
+            <article>
+              <figure><img src="images/ico_localizacion.png" alt=""></figure>
+              <aside>
+                <h5>Localización de locales</h5>
+                <p>Una forma sencilla de localizar tus establecimientos favoritos.</p>
+              </aside>
+            </article>
+            <article>
+              <figure><img src="images/ico_regalo.png" alt=""></figure>
+              <aside>
+                <h5>Obten muchos premios</h5>
+                <p>Tu fidelidad es importante para nosotros y asi que te premiamos por tu esfuezo.</p>
+              </aside>
+            </article>
+            <article>
+              <figure><img src="images/ico_codigoqr.png" alt=""></figure>
+              <aside>
+                <h5>Un simple punch</h5>
+                <p>Puedes activar tus punchs leyendo un código QR, disponible en los establecimientos afiliados.</p>
+              </aside>
+            </article>
+          </section>
+      </aside>
+
+     </section>
+      <a id="topBtn" href="#top"class="downbutton"><aside class="icon-angle-up"></aside></a></aside>
+     </section>
+     
+  </section>
+
+  <footer>
+     <section class="container">
+        <section class="bottom_menu">
+          <section class="About">
+            <h3>NAVEGACIÓN</h3>
+            <ul>
+              <li><a id="topBtn" href="#top"class="topBtn">Inicio</a></li>
+              <li><a id="demo1Btn" href="#demo1"class="demoBtn">Como Funciona</a></li>
+              <li><a id="demo2Btn" href="#demo2"class="demoBtn">Donde Encontrarnos</a></li>
+              <li><a id="demo3Btn" href="#demo3"class="demoBtn">Download</a></li>
+              <li><a id="demo4Btn" href="#demo4"class="demoBtn">Para negocios</a></li>
+              <li><a href="#">Términos y Condiciones</a></li>
+            </ul>
+          </section>
+          <section class="follow">
+            <h3>Follow Us</h3>
+            <aside class="socialmedia">
+              <a href="#" role="twitter" class="icon-twitter"></a>
+              <a href="#" role="facebook"  class="icon-facebook"></a>
+            </aside>
+          </section>
+        </section>
+        <section class="contactenos">
+          <a name="footer"></a>
+          <h3>más informacion</h3>
+          <form id="contact" method="POST">
+            <div id="respuesta"></div>
+            <label>Nombre</label>
+            <INPUT type="text" id="fname"  name="fname" placeholder="Nombre completo"  /><br/>
+           <label>Email</label>
+            <INPUT type="email" id="email" name="email"  /><br/>
+            <label>Comentario</label>
+            <textarea  rows="4"  id="comments" name="comments"  ></textarea><br/>
+            <input type="submit" value="Enviar" id="enviar">
+          </form>
+        </section>
+
+         <section class="suscribirse">
+          <h3>Suscribirse</h3>
+          <form>
+            <INPUT type="email" id="email" placeholder="digite su correo el&eacute;ctronico"/><br/>
+           <input type="submit" value="suscribirse ahora">
+          </form>
+        </section>
+     </section>
+  </footer>
+  <!-- Modal -->
+<div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"  aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Ingresar</h4>
+      </div>
+      <div class="modal-body">
+        <section role="login">
+  <header>
+    <figure class="user">
+      <div class="icondefault icon-user"></div>
+    </figure>
+    <h2>Acceder a <strong>tu cuenta</strong></h2>
+  </header>
+  <fieldset class="camposlogin">
+    <label>Usuario:</label>
+    <input type="text"  placeholder="Su correo eléctronico" required /><br/>
+    <label>Contraseña:</label>
+    <input type="password" placeholder="mínimo 6 digitos"/>
+  </fieldset><br/>
+  <aside>
+    <a href="#" class="olvide">Olvide mi contraseña</a>
+    <a href="#" class="registro">Registrarse</a>
+  </aside>
+</section>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Ingresar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+$("[id*='Btn']").stop(true).on('click',function(e){e.preventDefault();$(this).scrolld();});
+ $(function(){
+        $('#cbp-fwslider').cbpFWSlider();
+
+      });
+
+</script>
+<script src="js/jquery.cbpFWSlider.min.js"></script>
+</body>
+</html>
