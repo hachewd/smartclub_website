@@ -420,7 +420,7 @@ footer .bottom_menu li, .contactenos label, .suscribirse label{
 	color:#eaeaea;
 	margin: 5px 0; 
 	padding:5px 10px;
-	width: 48%;
+	width: 55%;
 }
 .suscribirse{
 	overflow: hidden;
@@ -442,7 +442,7 @@ footer .bottom_menu li, .contactenos label, .suscribirse label{
 	font-family: 'Quicksand', sans-serif;
 	font-size: 14px;
 	float:right;
-	margin: 10px 30px 0px 0px;
+	margin: 10px 18% 0px 0px;
 	padding: 5px;
 }
 .contactenos input[type="submit"]:hover, .suscribirse  input[type="submit"]:hover{

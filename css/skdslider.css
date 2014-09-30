@@ -88,6 +88,7 @@ text-decoration:underline;
 	top:50%;
 	left:2%;
 	margin-top:-17px;
+	z-index: 50;
 }
 
 .skdslider a.next{
@@ -100,6 +101,7 @@ text-decoration:underline;
 	top:50%;
 	right:2%;
 	margin-top:-17px;
+	z-index: 50;
 }
 .skdslider a.prev:hover{
   
