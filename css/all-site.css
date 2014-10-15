@@ -49,8 +49,8 @@ nav[role="top_page"] ul.menufull li a{
 	text-decoration: none;
 	transition: all 0.3s;
 	position: relative;
-	padding-left:10px;
-	padding-right:10px;
+	padding-left:20px;
+	padding-right:20px;
 	width: 100%;
 	z-index: 100;
 }
@@ -174,7 +174,7 @@ section[role="beneficios"]{
 	padding: 40px 0;
 }
 section[role="testimonials"]{
-	padding: 47px 0 20px 0;
+	padding: 10px 0 20px 0;
 }
 
 section[role="comofunciona"] article p{
@@ -193,10 +193,15 @@ section[role="comofunciona"] article, section[role="comofunciona"] article h4 as
 	display: inline-block;
 	vertical-align: top
 }
-section[role="comofunciona"] h1, section[role="testimonials"] h1, section[role="beneficios"] h1{
+section[role="comofunciona"] h2, section[role="testimonios"] h2, section[role="beneficios"] h2{
 	color: #545454;
 	font-size: 25px;
+	font-family: 'Quicksand', sans-serif;
 	text-transform: uppercase;
+
+}
+section[role="testimonios"]{
+background: url(../images/bg-sec.jpg) repeat-x;
 }
 section[role="comofunciona"]  h3{
 	color: #313131;
@@ -222,7 +227,7 @@ section[role="comofunciona"] article h4{
 section[role="comofunciona"] article h4 strong{
 	font-size: 26px;
 }
-section[role="beneficios"] h1{
+section[role="beneficios"] h2{
 	color: #fff;
 	font-weight: normal;
 }
@@ -234,7 +239,7 @@ section[role="beneficios"]  figure.cel img{
 	width: 100%;
 }
 section[role="testimonials"]{
-	background:#fff;
+	/*background:#fff;*/
 	display: inline-block;
 	margin-bottom: 2px;
 }
@@ -652,6 +657,129 @@ footer .bottom_menu li a{
 	font-size: 23px;
 	padding: 20px;
 }
+.descserviciosneg{
+	position: relative;
+}
+.parasunegocio figure, .parasunegocio .descserviciosneg, .descserviciosneg blockquote p, .descserviciosneg blockquote a, .descserviciosneg blockquote div.desinsc, .ingresar a, .titplan, .plan{
+	display: inline-block;
+	vertical-align: top;
+}
+.descserviciosneg blockquote a.inscribirse{
+	background: #087f8f;
+	border-radius: 10px;
+	color:#ebebeb;
+	font-size: 1.5em;
+	margin-top: 15px;
+	padding: 10px 25px;
+	text-decoration: none;
+}
+.descserviciosneg blockquote a.inscribirse:hover{
+	background: #26aabd;
+}
+.parasunegocio .descserviciosneg{
+	margin-left: -2%;
+}
+.parasunegocio h3{
+	color:#404352;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 1.8em;
+	font-weight: bold;
+	letter-spacing: -1px;
+	margin: 5px 0 10px 0;
+}
+.descserviciosneg{
+	width: 65%;
+}
+.descserviciosneg blockquote{
+	border-left:0;
+	color:#a3a3af;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 16px;
+}
+
+.descserviciosneg blockquote div.desinsc{
+	margin-right: 2%;
+	width: 68%;
+}
+.ingresar{
+	margin-top: 25px;
+	border-top: dotted 2px #a4a4a4;
+	text-align: right;
+	padding-top: 30px;
+}
+.ingresar a{
+	background: #272727;
+	border-radius: 10px;
+	margin-left: 8%;
+	margin-top: -12px;
+	padding: 10px 15px;
+	color:#b9b9b8;
+}
+.ingresar a:hover{
+	color: #fff;
+	background: #be120d;
+	text-decoration: none;
+}
+.planes{
+	padding: 2% 5%;
+}
+.titplan{
+	color: #949494;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 1.2em;
+	margin-right:2%;
+	width: 23%;
+}
+.titplan img{
+	width: 100%;
+}
+.titplan figcaption{
+	margin-left:10px;
+}
+.plan{
+	margin-left: 3%;
+	position: relative;
+	width: 32%;
+}
+.plan h4{
+	font-family: 'Quicksand', sans-serif;
+	font-size: 1.4em;
+	font-weight: bolder;
+	border-bottom: dashed 1px #a6a6a6;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	text-transform: uppercase;
+}
+.plan ul{
+	color: #737373;
+	font-size: 0.9em;
+	list-style: none;
+	line-height: 26px;
+	margin: 0 0 0 10px;
+	padding: 0;
+	text-transform: uppercase;
+}
+.turq h4, .turq a{
+	color: #087f8f;
+}
+.verd h4, .verd a{
+	color: #7eae0a;
+}
+.plan a{
+	display: inline-block;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 1em;
+	font-weight: bold;
+	margin: 15px 0 0 10px;
+	text-transform: uppercase;
+}
+.plan a:hover{
+	color:#333;
+}
+.precio{
+	display: inline-block;
+	margin-left: 10%;
+}
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-width: 320px) and (max-width: 799px) {
 	.container{
@@ -745,6 +873,37 @@ footer .bottom_menu li a{
 		margin: 10px auto;
 		width:80%;
 	}
+	.plan, .titplan{
+		display: block;
+		width: 95%;
+	}
+	.parasunegocio figure{
+		display: block;
+		margin: 0 auto;
+		width: 95%;
+	}
+	.parasunegocio figure img{
+		width: 100%;
+	}
+	.parasunegocio .descserviciosneg{
+		display: block;
+		margin: 0 auto;
+		width: 95%;
+	}
+	.descserviciosneg blockquote div.desinsc{
+		display: block;
+		width: 100%;
+	}
+	.ingresar{
+		text-align: left;
+		display: block;
+		width: 100%;
+	}
+	.ingresar a{
+		display: block;
+		margin-top: 10px;
+		margin-left: 0;
+	}
 }
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-width: 800px) and (max-width: 1023px) {
@@ -836,6 +995,18 @@ footer .bottom_menu li a{
 	}
 	nav[role="top_page"] ul.menufull li:nth-last-child(1){
 		border: 0;
+	}
+	.descserviciosneg{
+		width: 50%;
+	}
+	.descserviciosneg blockquote div.desinsc{
+		width: 100%;
+	}
+	.descserviciosneg blockquote{
+		padding: 0;
+	}
+	.ingresar a{
+		margin-top: 10px;
 	}
 
 }

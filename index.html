@@ -137,7 +137,7 @@ $(function(){
         <li><a id="demo2Btn" href="#demo2" class="demoBtn"><aside class="icon-location"></aside>Encuentranos</a></li>
         <li><a id="demo3Btn" href="#demo3" class="demoBtn"><aside class="icon-box-add"></aside>Download</a></li>
         <li><a id="demo4Btn" href="#demo4" class="demoBtn"><aside class="icon-stats"></aside>Para Negocios</a></li>
-        <li><a href="#" data-toggle="modal" data-target="#registro" class="demoBtn"><aside class="icon-user"></aside>Ingresar</a></li>
+       
       </ul>
    
     </section>
@@ -188,7 +188,7 @@ $(function(){
 <a name="demo1" id="demo1"></a>
   <section  role="comofunciona">
     <section class="container ">
-      <h1>Como funciona</h1>
+      <h2>Como funciona</h2>
       <h3>Una manera muy sencilla de <strong>ganar premios y descuentos</strong> en tu negocios favorito.</h3>
       <article>
         <figure><img src="images/escanea.png"/></figure>
@@ -230,7 +230,7 @@ $(function(){
   <section role="beneficios"> 
     <section class="container">
 
-       <h1>Download</h1>
+       <h2>Download</h2>
    <br/>
       <figure class="cel">
         <img src="images/smartphones.png"/>
@@ -255,7 +255,25 @@ $(function(){
   </section>
    <a name="demo3" id="demo4"></a>
   <section role="testimonios">
-     <section class="container">
+     <section class="container"><br/><br/>
+      <section class="parasunegocio">
+          <h2>Para Negocios</h2>
+          <figure>
+            <img src="images/responsive_d.png" title="Adaptable a diversos dispositivos"/>
+          </figure>
+          <div class="descserviciosneg">
+              <blockquote>
+                <div class="desinsc">
+                  <h3>Cree y personalice su tienda</h3>
+                  <p>Controle sus promociones, revise sus estadisticas, crear su red de locales y mucho más.</p>
+                </div>
+                 <a href="#" data-toggle="modal" data-target="#registro" class="demoBtn inscribirse">Inscribirme</a>
+                 <br/>
+                 <div class="ingresar">¡Ya disfruto de mi <strong>Smartclub!</strong><a href="#" data-toggle="modal" data-target="#myModal" class="demoBtn">Ingresar a mi tienda</a></div>
+              </blockquote>
+          
+        </div>
+      </section>
       <section role="testimonials">
         <br/>
         <h1>testimonios</h1>
@@ -404,12 +422,33 @@ $(function(){
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">Comprar plan</h4>
+        <h4 class="modal-title" id="myModalLabel">Inscribirse a Smartclub</h4>
       </div>
-      <div class="modal-body">
-        <br/>
-        <br/>
-        <br/>
+      <div class="modal-body planes">
+        <figure class="titplan">
+          <img src="images/planes_tit.png"/>
+          <figcaption>Dale a sus clientes una razón más para regresar.</figcaption>
+        </figure>
+        <div class="plan turq">
+          <h4>Basic</h4>
+          <ul>
+            <li>$24.95 monthly</li>
+            <li>50 cardholders free</li>
+            <li>$1 for each additional cardholder </li>
+          </ul>
+          <a href="#">Comprar ahora</a>
+          <div class="precio"><img src="images/precio_24.png"/></div>
+        </div>
+        <div class="plan verd">
+          <h4>Business </h4>
+          <ul>
+            <li>$99 monthly</li>
+            <li>500 cardholders free</li>
+            <li>$0.5 for each additional cardholder</li>
+          </ul>
+          <a href="#">Comprar ahora</a>
+          <div class="precio"><img src="images/precio_99.png"/></div>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
