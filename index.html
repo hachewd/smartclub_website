@@ -436,7 +436,7 @@ $(function(){
             <li>50 cardholders free</li>
             <li>$1 for each additional cardholder </li>
           </ul>
-          <a href="#">Comprar ahora</a>
+          <a href="#" data-toggle="modal" data-target="#comprar">Comprar ahora</a>
           <div class="precio"><img src="images/precio_24.png"/></div>
         </div>
         <div class="plan verd">
@@ -446,9 +446,55 @@ $(function(){
             <li>500 cardholders free</li>
             <li>$0.5 for each additional cardholder</li>
           </ul>
-          <a href="#">Comprar ahora</a>
+          <a href="#" data-toggle="modal" data-target="#comprar">Comprar ahora</a>
           <div class="precio"><img src="images/precio_99.png"/></div>
         </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade bs-example-modal-lg" id="comprar" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"  aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Comprar tu plan Smartclub</h4>
+      </div>
+      <div class="modal-body pagar">
+        <div class="resumen">
+          <h4>Resumen del Pedido</h4>
+          <table>
+            <thead>
+              <th width="70%">Item</th>
+              <th width="30%">Valor</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Plan Basic</td>
+                <td>29.95</td>
+              </tr>
+              <tr>
+                <td>Costo de Instalación</td>
+                <td>00.00</td>
+               </tr>
+            </tbody>
+          </table>
+          <div class="total">total de la orden: $29.95</div>
+        </div>
+        <fieldset class="cardholder">
+          <label>País:</label><input type="text" id="country" name="country" required/><br/>
+          <label>Número de tarjeta:</label><input type="text" id="card" name="card" required/><br/>
+          <label>tipo de pago:</label><img src="images/tipo_pago.jpg" alt="tipopago" required/><br/>
+          <label>Expirar:</label><input type="text" id="expirar" name="expirar" required/><br/>
+          <label>CSC:</label><input type="text" id="CSC" name="CSC" required/><br/>
+          <label>Nombre:</label><input type="text" id="name" name="name" required/><br/>
+          <label>E-mail:</label><input type="email" id="email" name="email" required/><br/>
+          <label>Teléfono:</label><input type="phone" id="phone" name="phone" required/>
+        </fieldset>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

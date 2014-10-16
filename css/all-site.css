@@ -676,6 +676,15 @@ footer .bottom_menu li a{
 .descserviciosneg blockquote a.inscribirse:hover{
 	background: #26aabd;
 }
+.parasunegocio{
+	padding: 0 15px;
+}
+.parasunegocio figure{
+	width: 35%;
+}
+.parasunegocio figure img{
+	width: 100%;
+}
 .parasunegocio .descserviciosneg{
 	margin-left: -2%;
 }
@@ -687,6 +696,7 @@ footer .bottom_menu li a{
 	letter-spacing: -1px;
 	margin: 5px 0 10px 0;
 }
+
 .descserviciosneg{
 	width: 65%;
 }
@@ -699,7 +709,7 @@ footer .bottom_menu li a{
 
 .descserviciosneg blockquote div.desinsc{
 	margin-right: 2%;
-	width: 68%;
+	width: 70%;
 }
 .ingresar{
 	margin-top: 25px;
@@ -779,6 +789,83 @@ footer .bottom_menu li a{
 .precio{
 	display: inline-block;
 	margin-left: 10%;
+}
+
+.resumen, .cardholder,.cardholder label{
+	display: inline-block;
+	vertical-align: top;
+}
+.resumen{
+	margin: 0 5% 0 3%;
+	width: 35%;
+}
+.resumen h4{
+	color: #0993a5;
+	display: block;
+	font-size:17px;
+	font-weight: normal;
+	margin-bottom: 15px;
+	text-transform: uppercase;
+}
+.resumen table{
+	color: #949494;
+	font-size: 14px;
+	font-weight: normal;
+	width: 100%;
+}
+.resumen table thead{
+	color: #fff;
+	font-size: 15px;
+	background: #0993a5;
+}
+.resumen table thead th{
+	font-weight: normal;
+	padding: 5px 10px;
+}
+.resumen tbody td{
+	font-weight: normal;
+	padding: 10px 10px;
+}
+.resumen table tbody tr:nth-child(even) {
+	background: #ebebeb;
+}
+.resumen table tbody tr:nth-child(odd) {
+	background: #FFF
+}
+.resumen table thead th:nth-last-child(1),.resumen tbody td:nth-last-child(1){
+	text-align: center;
+}
+.resumen .total{
+	border-top: dashed 1px #a6a6a6;
+	color: #990000;
+	font-size: 18px;
+	margin-top: 20px;
+	padding-top: 15px;
+	text-align: center;
+}
+.cardholder{
+	background: #f4f4f4;
+	border-radius: 10px;
+	margin-left: 0 1% 0 2%;
+	padding: 20px 10px;
+	width: 50%;
+}
+.cardholder label{
+	color: #949494;
+	font-size: 13px;
+	font-weight: normal;
+	margin-right: 10px;
+	padding-top:5px;
+	text-align: right;
+	width: 40%;
+}
+.cardholder input[type="text"],input[type="email"],input[type="phone"]{
+	color: #949494;
+	font-size: 13px;
+	border: 1px solid #d7d7d7;
+	border-radius: 5px;
+	padding: 3px 10px;
+	margin-bottom: 10px;
 }
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-width: 320px) and (max-width: 799px) {
@@ -873,17 +960,18 @@ footer .bottom_menu li a{
 		margin: 10px auto;
 		width:80%;
 	}
-	.plan, .titplan{
+	.plan{
 		display: block;
 		width: 95%;
+	}
+	.titplan{
+		display: block;
+		width: 60%;
 	}
 	.parasunegocio figure{
 		display: block;
 		margin: 0 auto;
 		width: 95%;
-	}
-	.parasunegocio figure img{
-		width: 100%;
 	}
 	.parasunegocio .descserviciosneg{
 		display: block;
@@ -899,10 +987,22 @@ footer .bottom_menu li a{
 		display: block;
 		width: 100%;
 	}
-	.ingresar a{
+	.descserviciosneg .ingresar a{
 		display: block;
 		margin-top: 10px;
 		margin-left: 0;
+		width: 200px;
+	}
+	.resumen, .cardholder{
+		display: block;
+		margin: 10px auto;
+		width: 90%;
+	}
+	.cardholder label, .cardholder input[type="text"],.cardholder input[type="email"],.cardholder input[type="phone"]{
+		display: block;
+		text-align: left;
+		margin-bottom: 0;
+		width: 90%;
 	}
 }
 /* iPads (portrait and landscape) ----------- */
@@ -996,8 +1096,9 @@ footer .bottom_menu li a{
 	nav[role="top_page"] ul.menufull li:nth-last-child(1){
 		border: 0;
 	}
-	.descserviciosneg{
-		width: 50%;
+	.parasunegocio .descserviciosneg{
+		margin-left: 2%;
+		width: 46%;
 	}
 	.descserviciosneg blockquote div.desinsc{
 		width: 100%;
@@ -1007,6 +1108,15 @@ footer .bottom_menu li a{
 	}
 	.ingresar a{
 		margin-top: 10px;
+	}
+	.parasunegocio figure{
+		width: 40%;
+	}
+	.cardholder label{
+		width: 30%;
+	}
+	.cardholder input[type="text"],.cardholder input[type="email"], .cardholder input[type="phone"]{
+		width: 50%;
 	}
 
 }
