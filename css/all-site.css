@@ -19,11 +19,14 @@ body{
 nav[role="top_page"]{
 	background: #fff;
 	box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
-
 }
 nav[role="top_page"] figure, nav[role="top_page"] ul.menufull{
 	display: inline-block;
 	vertical-align: top;
+}
+nav[role="top_page"] figure{
+	padding: 10px 5% 0 10px;
+	width:30%;
 }
 nav[role="top_page"] figure img{
 	width: 100%;
