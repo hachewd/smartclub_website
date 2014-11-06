@@ -66,7 +66,7 @@ $( window ).ready(function() {
 		}
 		else{
 			$('#encuentranos').animate({
-				height: 100,
+				height: 150,
 			});
 			$(this).removeClass( "icon-arrow-up" ).addClass('icon-arrow-down');
 			showmap = 0;

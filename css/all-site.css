@@ -159,6 +159,7 @@ nav[role="top_page"] ul.menufull li a:hover strong{
 footer{
 	background: #242424;
 }
+
 section[role="comofunciona"]{
 	background: url(../images/bg-sec.jpg) repeat-x;
 	font-family: 'Quicksand', sans-serif;
@@ -166,9 +167,9 @@ section[role="comofunciona"]{
 }
 section[role="encuentranos"]{
 	background: url(../images/bg-sec-osc.jpg);
-	padding: 25px 0;
+	padding: 50px 0 25px 0;
 	overflow: hidden;
-	height:100px
+	height:150px
 }
 
 section[role="beneficios"]{
@@ -203,6 +204,7 @@ section[role="comofunciona"] h2, section[role="testimonios"] h2, section[role="b
 	text-transform: uppercase;
 
 }
+
 section[role="testimonios"]{
 background: url(../images/bg-sec.jpg) repeat-x;
 }
@@ -227,12 +229,18 @@ section[role="comofunciona"] article h4{
 	margin: 0 auto;
 	width: 80%;
 }
+section[role="comofunciona"] h2, section[role="comofunciona"] h3{
+	margin-top: 0;
+	margin-left: 5%;
+}
+
 section[role="comofunciona"] article h4 strong{
 	font-size: 26px;
 }
 section[role="beneficios"] h2{
 	color: #fff;
 	font-weight: normal;
+
 }
 section[role="beneficios"] figure.cel{
 	display: inline-block;
@@ -1086,8 +1094,8 @@ footer .bottom_menu li a{
 		width: 65%;
 	}
 	nav[role="top_page"] ul.menufull li a{
-		font-size: 11px;
-		padding: 25px 5px 0 5px;
+		font-size: 12px;
+		padding: 25px 15px 0 15px;
 		width: 100%;
 		height: 100px;
 	}
@@ -1121,7 +1129,18 @@ footer .bottom_menu li a{
 	.cardholder input[type="text"],.cardholder input[type="email"], .cardholder input[type="phone"]{
 		width: 50%;
 	}
-
+	section[role="comofunciona"] h2{
+		width: 90%;
+		margin: 30px auto 10px auto;
+	}
+	section[role="beneficios"] h2{
+		width: 90%;
+		margin: 40px auto 10px auto;
+	}
+	section.parasunegocio h2{
+		width: 90%;
+		margin: 40px 0 40px 0;
+	}
 }
 @media only screen and (min-width : 1024px) {
 /* Styles */
@@ -1182,14 +1201,25 @@ footer .bottom_menu li a{
 		margin: 5px 3%;
 		width: 60%;
 	}
-
-	section[role="comofunciona"] h1{
+	section[role="comofunciona"] h2{
 		width: 90%;
-		margin: 10px auto 0 auto;
+		margin: 30px auto 10px auto;
+	}
+	section[role="beneficios"] h2{
+		width: 90%;
+		margin: 40px auto 10px auto;
+	}
+	section[role="comofunciona"] h2{
+		width: 90%;
+		margin: 30px auto 10px auto;
+	}
+	section.parasunegocio h2{
+		width: 90%;
+		margin: 40px 0 40px 0;
 	}
 	section[role="comofunciona"]  h3{
 		width: 90%;
-		margin: 10px auto 20px auto;
+		/*margin: 10px auto 20px auto;*/
 	}
 	.maps{
 		width: 90%;
