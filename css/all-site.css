@@ -878,6 +878,17 @@ footer .bottom_menu li a{
 	padding: 3px 10px;
 	margin-bottom: 10px;
 }
+.modal{
+    bottom: 0;
+    display: none;
+    left: 0;
+    overflow-x: auto;
+    overflow-y: scroll; /* <--- this guy right here */
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1040;
+}
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-width: 320px) and (max-width: 799px) {
 	.container{
